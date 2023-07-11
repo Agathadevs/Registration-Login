@@ -1,6 +1,7 @@
 # Registration-Login
 ### cutomtkinter
-a simple Registration-Login GUI Project
+- a simple Registration-Login GUI Project
+- using python
 ### Modules 
 - pip install custontkinter
 - pip install json
