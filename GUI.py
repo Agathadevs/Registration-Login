@@ -5,7 +5,6 @@ class ToplevelSignupWindow(ctk.CTkToplevel):
        def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.geometry("500x300")
-
         self.entry1=ctk.CTkEntry(self,placeholder_text="example@gmail.com",width=200)
         self.entry1.pack(padx=10,pady=15)
         
@@ -19,13 +18,12 @@ class ToplevelSignupWindow(ctk.CTkToplevel):
             acc=self.entry1.get()
             ps=self.entry2.get()
             if str(acc)[-10:]=="@gmail.com":
-                data={"account":acc,"passward":ps}
-                with open("info.json","r") as f:
-                     old=json.load(f)
-                n=old+data
+                ndata={acc:ps}
+                with open('info.json', 'r') as f:
+                    data = json.load(f)
+                data["User"].update(ndata)
                 with open("info.json","w") as f:
-                    json.dump(n,f)
-                
+                    json.dump(data,f)        
             else:
                  pass
              
