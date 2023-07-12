@@ -1,1 +1,5 @@
-{"User": {"acc": "ps", "test@gmail.com": "321", "s123@gmail.com": "567"}}
+{"User": 
+  {"acc": "ps", 
+    "test@gmail.com": "321", 
+    "s123@gmail.com": "567"}
+}
